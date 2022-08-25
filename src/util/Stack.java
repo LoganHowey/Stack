@@ -3,32 +3,35 @@ package util;
 import java.lang.reflect.Array;
 
 public class Stack<Type> {
-    public static Array data;
+    public Type[] data = (Type[]) new Object[10];
+    private int i = 0;
 
     public void push(Type item) {
-        Type newItem = item;
-        }
-
-    public Type pop(){
-        return null;
-    };
-
-    public static int size(){
-       int size = 0;
-        for (int i = 0; i < Array.getLength(data); i++){
-            size++;}
-        return size;
+        data[i] = item;
+        i++;
     }
 
-    void grow(){
+    public Type pop() {
+        return null;
+    }
 
-    };
+    ;
 
-    boolean requiresGrowth(){
+    public int size() {
+        return i;
+    }
+
+    void grow() {
+
+    }
+
+    ;
+
+    boolean requiresGrowth() {
         return false;
-    };
+    }
 
-
+    ;
 
 
 }
