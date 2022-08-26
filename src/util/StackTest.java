@@ -35,4 +35,12 @@ public class StackTest {
         Assert.assertThat(objectStack.size(), Is.is(4));
 
     }
+
+    @Test
+            (expected = ArrayIndexOutOfBoundsException.class)
+    public void popEmptyStack(){
+        Stack<Object> objectStack = new Stack<>();
+        objectStack.pop();
+        objectStack.pop();
+    }
 }

@@ -13,10 +13,12 @@ public class Stack<Type> {
 
     public void pop() {
         if (i == 0){
-            throw new Exception("");
+            throw new ArrayIndexOutOfBoundsException("There is nothing to pop");
         }
-        i--;
-        data[i] = null;
+        else {
+            i--;
+            data[i] = null;
+        }
 
     }
 
