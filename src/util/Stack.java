@@ -11,9 +11,15 @@ public class Stack<Type> {
         i++;
     }
 
-    public Type pop() {
-        return null;
+    public void pop() {
+        if (i == 0){
+            throw new Exception("");
+        }
+        i--;
+        data[i] = null;
+
     }
+
 
     ;
 
